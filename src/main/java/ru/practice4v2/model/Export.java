@@ -1,5 +1,6 @@
 package ru.practice4v2.model;
 
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.ArrayList;

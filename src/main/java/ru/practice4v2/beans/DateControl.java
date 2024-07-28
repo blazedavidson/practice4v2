@@ -1,13 +1,15 @@
 package ru.practice4v2.beans;
 
+import org.springframework.core.annotation.Order;
 import ru.practice4v2.model.FilesReadStructure;
 import ru.practice4v2.model.FilesReadData;
 import ru.practice4v2.model.LogTransformation;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
 import org.springframework.stereotype.Component;
-
+@Order(3)
 @Component
+
 public class DateControl implements App {
 
     private final FilesReadData filesData;
@@ -21,6 +23,7 @@ public class DateControl implements App {
     @LogTransformation(filename = "DateControl.log")
 
     public void validate() {
+        System.out.println("DateControl");
         for (int i = 0; i < filesData.getCount(); i++) {
 
             FilesReadStructure row = filesData.getID(i);
